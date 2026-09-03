@@ -49,13 +49,15 @@ Create a conda virtual environment and activate it:
 Install SurRoL in the created conda environment:
 
    ```shell
-   git clone --recursive -b SurRoL-v2 https://github.com/med-air/SurRoL.git
+   git clone -b seldinger-headless https://github.com/SeldingerMed/SurRoL.git
    cd SurRoL
    pip install -e .
    ```
 
 Headless `p.DIRECT` environments use PyBullet's built-in renderer by default. Set
 `SURROL_USE_EGL=1` only when the optional `eglRenderer` plugin is installed.
+The default install does not compile the vendored GUI/rendering submodules. Install
+the `gui` extra and initialize those submodules only for interactive rendering.
 
 ### 4. Install PyTorch Following the [Official Guideline](https://pytorch.org/get-started/locally/) using Conda.
 
