@@ -1,5 +1,4 @@
 import time,os
-import socket
 
 import gym
 from gym import spaces
@@ -50,8 +49,7 @@ class SurRoLEnv(gym.Env):
                 self.cid = cid
             # See PyBullet Quickstart Guide Synthetic Camera Rendering
             # TODO: no light when using direct without egl
-            if socket.gethostname().startswith('pc') or True:
-                # TODO: not able to run on remote server
+            if os.environ.get('SURROL_USE_EGL') == '1':
                 egl = pkgutil.get_loader('eglRenderer')
                 plugin = p.loadPlugin(egl.get_filename(), "_eglRendererPlugin")
         # camera related setting

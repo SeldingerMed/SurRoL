@@ -54,6 +54,9 @@ Install SurRoL in the created conda environment:
    pip install -e .
    ```
 
+Headless `p.DIRECT` environments use PyBullet's built-in renderer by default. Set
+`SURROL_USE_EGL=1` only when the optional `eglRenderer` plugin is installed.
+
 ### 4. Install PyTorch Following the [Official Guideline](https://pytorch.org/get-started/locally/) using Conda.
 
 
