@@ -73,6 +73,7 @@ if __name__ == '__main__':
             "imageio-ffmpeg",
             "opencv-python",
             "roboticstoolbox-python",
+            "spatialgeometry<1.4",
             "sympy",
             "panda3d==1.10.11",
             "trimesh",
@@ -94,4 +95,3 @@ if __name__ == '__main__':
         }
     )
     
-
